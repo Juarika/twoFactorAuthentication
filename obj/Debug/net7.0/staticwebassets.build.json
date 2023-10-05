@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qehx98HlLVMVcRFFrDRWXo5wapBXRDhhtqtEWAeM/4k=",
+  "Source": "twoFactorAuthentication",
+  "BasePath": "_content/twoFactorAuthentication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

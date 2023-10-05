@@ -20,7 +20,7 @@ public class TwoFactorController : Controller
     [HttpGet, Route("GetQRCode")]
     public string GetQRCode(string email)
     {
-        var tfa = new TwoFactorAuth("ManuelToscanoDEV", 6, 30, Algorithm.SHA256, new ImageChartsQrCodeProvider());
+        var tfa = new TwoFactorAuth("Milthon", 6, 30, Algorithm.SHA256, new ImageChartsQrCodeProvider());
         var secret = tfa.CreateSecret(160);
 
         User user = new User();
@@ -34,7 +34,7 @@ public class TwoFactorController : Controller
     [HttpGet, Route("GetQRCodeAsImage")]
     public FileContentResult GetQRCodeAsImage(string email)
     {
-        var tfa = new TwoFactorAuth("ManuelToscanoDEV", 6, 30, Algorithm.SHA256, new ImageChartsQrCodeProvider());
+        var tfa = new TwoFactorAuth("Milthon", 6, 30, Algorithm.SHA256, new ImageChartsQrCodeProvider());
         var secret = tfa.CreateSecret(160);
 
         User user = new User();
@@ -53,7 +53,7 @@ public class TwoFactorController : Controller
         string secret = user.GetSecret(email);
         user = null;
 
-        var tfa = new TwoFactorAuth("ManuelToscanoDEV", 6, 30, Algorithm.SHA256);
+        var tfa = new TwoFactorAuth("Milthon", 6, 30, Algorithm.SHA256);
         return tfa.VerifyCode(secret, code);
     }
 }

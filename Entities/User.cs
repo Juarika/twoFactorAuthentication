@@ -2,16 +2,15 @@ using System.Data;
 
 namespace twoFactorAuthentication.Entities;
 
-public class User : BaseEntity
+public class User
 {
+    public int Id { get; set; }
     public string UserName { get; set; }
-    public string IdenNumber { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
     public User()
     {
-        DataAccess.cadenaConexion = @"Data Source=W11-EPV\SQLSERVER;Initial Catalog=EPV;Integrated Security=true;";
+        DataAccess.cadenaConexion = @"Data Source=localhost;Initial Catalog=twoFactorDB;User=root;Password=123456;";
     }
     public void SetSecret(string email, string code)
     {
