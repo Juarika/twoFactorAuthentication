@@ -1,4 +1,4 @@
-namespace twoFactorAuthentication.Properties.Entities;
+namespace twoFactorAuthentication.Entities;
 
 public class RefreshToken : BaseEntity
 {

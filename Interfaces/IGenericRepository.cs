@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using twoFactorAuthentication.Properties.Entities;
+using twoFactorAuthentication.Entities;
 
-namespace twoFactorAuthentication.Properties.Interfaces
+namespace twoFactorAuthentication.Interfaces
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {
